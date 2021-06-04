@@ -148,3 +148,5 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_exit_checks = 0
 
 let g:ycm_show_diagnostics_ui = 0
+
+let g:ycm_clangd_binary_path="/data/data/com.termux/files/usr/bin/clangd"

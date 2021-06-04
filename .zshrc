@@ -1,6 +1,6 @@
 neofetch
 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Enable Powerlevel10k instant prompt. Should stay close to the top of $HOME/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -11,9 +11,9 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/yuchan/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source $HOME/powerlevel10k/powerlevel10k.zsh-theme
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -114,13 +114,13 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias zshconfig="mate $HOME/.zshrc"
+# alias ohmyzsh="mate $HOME/.oh-my-zsh"
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# To customize prompt, run `p10k configure` or edit $HOME/.p10k.zsh.
+[[ ! -f $HOME/.p10k.zsh ]] || source ~/.p10k.zsh
 
-source ~/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+source $HOME/git/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 zstyle ':autocomplete:tab:*' insert-unambiguous yes
 zstyle ':autocomplete:tab:*' widget-style menu-complete
@@ -153,9 +153,11 @@ normally used in combination with the GNU operating system: the whole system
 is basically GNU with Linux added, or GNU/Linux.  All the so-called \"Linux\"
 distributions are really distributions of GNU/Linux."
 
-alias ls='ls --color=always -lah'
+alias ls='ls --color=always'
+alias lh='ls -lah'
+
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/yuchan/.zshrc'
+zstyle :compinstall filename '$HOME/.zshrc'
 
 autoload -Uz compinit
 # End of lines added by compinstall
